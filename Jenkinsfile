@@ -12,7 +12,3 @@ terraform $TERRAFORM_ACTION -auto-approve
 
 if [ $TERRAFORM_ACTION = "destroy" ]; then
 	exit 0
-else
-	cd ../Ansible
-	ansible-playbook -i /opt/ansible/inventory/aws_ec2.yaml apache.yaml 
-fi
